@@ -7,46 +7,68 @@
 
 ### Task 0. Setup
 
-Included jQuery from a CDN and wrote a $(document).ready(function() { ... }) function. I tested it by printing "jQuery is ready!" in the console.
+Included jQuery from a CDN and wrote a $(document).ready(function() { ... }) function. I tested it by printing "jQuery is ready!" in the console.  
+
+![](screenshots/web6_0.png)
 
 ### Task 1. Selectors & CSS
 
-Displayed my name, a personal headline, a short introduction, and a profile section with a title "Welcome to My Portfolio.". I used tag, ID, and class selectors to select different HTML elements and used `.css()` to change the styling of selected elements. I also dynamically updated my headline using `.html()` and added buttons to switch between light and dark themes.
+Displayed my name, a personal headline, a short introduction, and a profile section with a title "Welcome to My Portfolio.". I used tag, ID, and class selectors to select different HTML elements and used `.css()` to change the styling of selected elements. I also dynamically updated my headline using `.html()` and added buttons to switch between light and dark themes.  
+
+![](screenshots/web6_1.png)
 
 ## Part 2. jQuery Effects
 
 ### Task 2. Visibility Methods
 
-Created an "About Me" section and added a short biography, a current status message, and a list of my interests. I added three buttons: Hide, Show, and Toggle. I used them to control the visibility of my status message.
+Created an "About Me" section and added a short biography, a current status message, and a list of my interests. I added three buttons: Hide, Show, and Toggle. I used them to control the visibility of my status message.  
+
+![](screenshots/web6_2.png)
 
 ### Task 3. Fade Methods
 
-Displayed two travel photos and used `.fadeIn()`, `.fadeOut()`, and `.fadeToggle()` effects to control the visibility of the photos.
+Displayed two travel photos and used `.fadeIn()`, `.fadeOut()`, and `.fadeToggle()` effects to control the visibility of the photos.  
+
+![](screenshots/web6_3.png)
 
 ### Task 4. Slide Methods
 
-Created three clickable headings and placed related information inside a collapsible panel beneath each heading. I used `.slideUp()`, `.slideDown()`, and `.slideToggle()` to make the interaction smooth.
+Created three clickable headings and placed related information inside a collapsible panel beneath each heading. I used `.slideUp()`, `.slideDown()`, and `.slideToggle()` to make the interaction smooth.  
+
+![](screenshots/web6_4.png)
 
 ## Part 3. DOM Manipulation with jQuery
 
 ### Task 5. Add & Remove Elements
 
-Displayed an initial list containing four technical skills and added a text input where visitors can enter a new skill. I created three buttons: "Add Skill", "Prepend Skill", and "Remove Skill". I used `.append()`, `.prepend()`, and `.remove()` to make the buttons function and also added validation for empty input field.
+Displayed an initial list containing four technical skills and added a text input where visitors can enter a new skill. I created three buttons: "Add Skill", "Prepend Skill", and "Remove Skill". I used `.append()`, `.prepend()`, and `.remove()` to make the buttons function and also added validation for empty input field.  
+
+![](screenshots/web6_5.png)
 
 ### Task 6. Modifying Attributes
 
-Added a social media link and created a button that dynamically changes the link's destination using `.attr()`.
+Added a social media link and created a button that dynamically changes the link's destination using `.attr()`.  
+
+![](screenshots/web6_6.png)
 
 ### Task 7. Form Interaction
 
-Created a form with inputs for Name and Email. I used `.val()` and `.text()` to display the user's input live below the form.
+Created a form with inputs for Name and Email. I used `.val()` and `.text()` to display the user's input live below the form.  
+
+![](screenshots/web6_7.png)
 
 ## Part 4. Animations
 
 ### Task 8. Basic Animation
 
-Extended Task 5 by creating a visual representation of three technical skills using skill bars that initially have zero width. Different skill levels use different target widths. I added an "Animate My Skills" button that uses jQuery's `.animate()` method when clicked to increase the width of each skill bar. When the button is clicked again, the skill bars animate back to zero width.
+Extended Task 5 by creating a visual representation of three technical skills using skill bars that initially have zero width. Different skill levels use different target widths. I added an "Animate My Skills" button that uses jQuery's `.animate()` method when clicked to increase the width of each skill bar. When the button is clicked again, the skill bars animate back to zero width.  
+
+![](screenshots/web6_8.png)
 
 ## Summary
 
-Included jQuery from a CDN. Used it to change the styling of selected elements. Used jQuery effects methods like visibility, fade, and slide methods. Used jQuery for DOM Manipulation like adding and removing elements, modifying attributes, and displaying the user's input live. jQuery's `.animate()` was used to add animated skill bars that represent different skill levels of different technical skills.
+Included jQuery from a CDN. Used it to change the styling of selected elements. Used jQuery effects methods like visibility, fade, and slide methods. Used jQuery for DOM Manipulation like adding and removing elements, modifying attributes, and displaying the user's input live. jQuery's `.animate()` was used to add animated skill bars that represent different skill levels of different technical skills.  
+
+![](screenshots/web6_sc1.png)
+![](screenshots/web6_sc2.png)
+![](screenshots/web6_sc3.png)
