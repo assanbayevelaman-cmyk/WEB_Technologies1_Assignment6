@@ -1,0 +1,228 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                console.log("jQuery is ready!");
+                $("p").css("font-family", "Arial");
+                $("#title").css("color", "navy");
+                $(".headline").css("font-weight", "bold");
+                $("#headline").html("AITU Software Engineering Student - SE-2538");
+                $("#light-btn").click(function() {
+                    $("body").css({
+                        "background": "white",
+                        "color": "black"
+                    });
+                });
+                $("#dark-btn").click(function() {
+                    $("body").css({
+                        "background": "black",
+                        "color": "white"
+                    });
+                });
+                $("#hide-btn").click(function() {
+                    $("#status").hide();
+                });
+                $("#show-btn").click(function() {
+                    $("#status").show();
+                });
+                $("#toggle-btn").click(function() {
+                    $("#status").toggle();
+                });
+                $(".gallery-img").css({"height": "200px", "width": "200px"});
+                $("#fade-in-btn").click(function() {
+                    $(".gallery-img").fadeIn();
+                });
+                $("#fade-out-btn").click(function() {
+                    $(".gallery-img").fadeOut();
+                });
+                $("#fade-toggle-btn").click(function() {
+                    $(".gallery-img").fadeToggle();
+                });
+                $(".panel").hide();
+                $(".panel-heading").click(function() {
+                    var panel = $(this).next(".panel");
+                    panel.slideToggle();
+                });
+                $("#slide-up-btn").click(function() {
+                    $(".panel").slideUp();
+                });
+                $("#slide-down-btn").click(function() {
+                    $(".panel").slideDown();
+                });
+                $("#add-btn").click(function() {
+                    var skill = $("#skill-input").val().trim();
+                    if (skill === "") {
+                        alert("Please type a skill first!");
+                        return;
+                    }
+                    $("#skill-list").append("<li>" + skill + "</li>");
+                    $("#skill-input").val("");
+                });
+                $("#prepend-btn").click(function() {
+                    var skill = $("#skill-input").val().trim();
+                    if (skill === "") {
+                        alert("Please type a skill first!");
+                        return;
+                    }
+                    $("#skill-list").prepend("<li>" + skill + "</li>");
+                    $("#skill-input").val("");
+                });
+                $("#remove-btn").click(function() {
+                    $("#skill-list li:last").remove();
+                });
+                var links = [
+                        { url: "https://www.youtube.com", label: "YouTube"},
+                        { url: "https://www.instagram.com", label: "Instagram"},
+                        { url: "https://www.tiktok.com", label: "TikTok"}
+                    ];
+                var i = 0;
+                $("#change-link-btn").click(function() {
+                    i = (i + 1) % links.length;
+                    $("#social-link").attr("href", links[i].url).text(links[i].label);
+                });
+                $("#name-input, #email-input").on("input", function() {
+                    var name = $("#name-input").val();
+                    var email = $("#email-input").val();
+                    $("#live-name").text(name);
+                    $("#live-email").text(email);
+                });
+                var skillsExpanded = false;
+                $("#animate-skills-btn").click(function() {
+                    if (!skillsExpanded) {
+                        $("#bar-html").animate({ width: "90%"}, 1000);
+                        $("#bar-css").animate({ width: "80%"}, 1000);
+                        $("#bar-js").animate({ width: "75%"}, 1000);
+                        $(this).text("Reset My Skills");
+                        skillsExpanded = true;
+                    } else {
+                        $(".skill-fill").animate({ width: "0%"}, 800);
+                        $(this).text("Animate My Skills");
+                        skillsExpanded = false;
+                    }
+                });
+            });
+        </script>
+        <style>
+            .skill-row {
+                margin-bottom: 12px;
+            }
+            .skill-label {
+                font-family: Arial, sans-serif;
+                margin-bottom: 4px;
+                font-weight: bold;
+            }
+            .skill-track {
+                background: lightgray;
+                border-radius: 6px;
+                height: 22px;
+                width: 100%;
+            }
+            .skill-fill {
+                height: 100%;
+                width: 0%;
+                border-radius: 6px;
+                background: green;
+                color: white;
+                font-family: Arial, sans-serif;
+                font-size: 12px;
+                line-height: 22px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="title">Welcome to My Portfolio.</h1>
+        <p>Yelaman Assanbayev</p>
+        <p id="headline" class="headline">AITU Software Engineering Student</p>
+        <p>Hi, my name is Yelaman Assanbayev and I'm an AITU student. My group is SE-2538.</p>
+        <button id="light-btn">Light Theme</button>
+        <button id="dark-btn">Dark Theme</button>
+        <h2>About Me</h2>
+        <p>I'm a software engineering student at AITU who enjoys programming and learning new technologies. I like reading, playing video games, and programming.</p>
+        <p id="status">Currently learning jQuery!</p>
+        <h3>My Interests</h3>
+        <ul>
+            <li>Programming</li>
+            <li>Video Games</li>
+            <li>Reading</li>
+        </ul>
+        <button id="hide-btn">Hide</button>
+        <button id="show-btn">Show</button>
+        <button id="toggle-btn">Toggle</button>
+        <h2>My Gallery</h2>
+        <div class="gallery">
+            <img class="gallery-img" src="paris-travel.png" alt="Paris travel photo">
+            <img class="gallery-img" src="tokyo-travel.png" alt="Tokyo travel photo">
+        </div>
+        <button id="fade-in-btn">Fade In</button>
+        <button id="fade-out-btn">Fade Out</button>
+        <button id="fade-toggle-btn">Fade Toggle</button>
+        <h2>Favorites</h2>
+        <h3 class="panel-heading">My Favorite Music</h3>
+        <div class="panel">
+            <p>I enjoy electronic and lo-fi music. Favorite Artists: Daft Punk.</p>
+        </div>
+        <h3 class="panel-heading">My Favorite Movie</h3>
+        <div class="panel">
+            <p>Interstellar (2014)</p>
+        </div>
+        <h3 class="panel-heading">My Favorite Subject</h3>
+        <div class="panel">
+            <p>Web Development</p>
+        </div>
+        <button id="slide-up-btn">Slide Up</button>
+        <button id="slide-down-btn">Slide Down</button>
+        <h2>Technical Skills</h2>
+        <ul id="skill-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+        </ul>
+        <input type="text" id="skill-input" placeholder="Enter a new skill">
+        <button id="add-btn">Add Skill</button>
+        <button id="prepend-btn">Prepend Skill</button>
+        <button id="remove-btn">Remove Skill</button>
+        <h2>Skill Levels</h2>
+        <div class="skill-row">
+            <div class="skill-label">HTML - 90%</div>
+            <div class="skill-track">
+                <div class="skill-fill" id="bar-html">90%</div>
+            </div>
+        </div>
+        <div class="skill-row">
+            <div class="skill-label">CSS - 80%</div>
+            <div class="skill-track">
+                <div class="skill-fill" id="bar-css">80%</div>
+            </div>
+        </div>
+        <div class="skill-row">
+            <div class="skill-label">JavaScript - 75%</div>
+            <div class="skill-track">
+                <div class="skill-fill" id="bar-js">75%</div>
+            </div>
+        </div>
+        <button id="animate-skills-btn">Animate My Skills</button>
+        <h2>Links</h2>
+        <p>
+            <a id="social-link" href="https://www.youtube.com">YouTube</a>
+        </p>
+        <button id="change-link-btn">Change Link</button>
+        <h2>Contacts</h2>
+        <form>
+            <p>
+                <label for="name-input">Name:</label><br>
+                <input type="text" id="name-input" placeholder="Enter your name">
+            </p>
+            <p>
+                <label for="email-input">Email:</label><br>
+                <input type="email" id="email-input" placeholder="Enter your email">
+            </p>
+        </form>
+        <h3>Live Preview</h3>
+        <p>
+            Name: <span id="live-name" style="font-weight:bold"></span><br>
+            Email: <span id="live-email" style="font-weight:bold"></span>
+        </p>
+    </body>
+</html>
