@@ -1,6 +1,6 @@
 # WEB_Technologies1_Assignment6
 
-**Name:** Assanbayev Yelaman
+**Name:** Assanbayev Yelaman  
 **Group:** SE-2538
 
 ## Part 1. Getting Started with jQuery
